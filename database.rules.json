@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "login": {
+      "$uid": {
+        ".write": "$uid === auth.uid"
+      }
+    }
+  }
+}
