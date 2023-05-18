@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
         // Add other providers as needed
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Impulse Buying App',
         theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => const AuthWrapper(),
           '/login': (context) => LoginPage(),
           '/registration': (context) => RegistrationPage(),
-          '/home': (context) => HomePage(),
+          '/home': (context) => const HomePage(),
         },
       ),
     );
@@ -74,7 +75,7 @@ class AuthWrapper extends StatelessWidget {
           return const CircularProgressIndicator();
         }
         if (snapshot.hasData) {
-          return HomePage();
+          return const HomePage();
         }
         return LoginPage();
       },

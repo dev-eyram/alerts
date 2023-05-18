@@ -10,6 +10,8 @@ class CheckoutScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Checkout'),
+        automaticallyImplyLeading: true,
+        scrolledUnderElevation: 2,
       ),
       body: Center(
         child: ElevatedButton(
