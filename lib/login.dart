@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:provider/provider.dart';
-//import 'package:your_app/auth.dart';
 import 'package:provider/provider.dart';
 
 import 'auth.dart';
@@ -9,7 +7,7 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  LoginPage({super.key});
+  LoginPage({Key? key}) : super(key: key);
 
   void _signIn(BuildContext context) async {
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
@@ -33,16 +31,19 @@ class LoginPage extends StatelessWidget {
               controller: _emailController,
               decoration: const InputDecoration(
                 labelText: 'Email',
+                prefixIcon: Icon(Icons.email),
               ),
             ),
+            const SizedBox(height: 16.0),
             TextFormField(
               controller: _passwordController,
               decoration: const InputDecoration(
                 labelText: 'Password',
+                prefixIcon: Icon(Icons.lock),
               ),
               obscureText: true,
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: () => _signIn(context),
               child: const Text('Sign In'),

@@ -29,7 +29,7 @@ class HistoryPage extends StatelessWidget {
   }
 }
 
-get purchaseTracker => purchaseTracker;
+get purchaseTracker => HistoryPage;
 
 @override
 Widget build(BuildContext context) {

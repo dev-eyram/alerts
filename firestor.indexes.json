@@ -1,0 +1,19 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Drf3bV1jOyYMH5XMSWDy",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "email",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "password",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

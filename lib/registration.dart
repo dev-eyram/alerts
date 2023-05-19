@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-//import 'package:your_app/auth.dart';
 
 import 'auth.dart';
 
 class RegistrationPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  RegistrationPage({super.key});
 
   void _signUp(BuildContext context) async {
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
@@ -19,7 +20,7 @@ class RegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Registration'),
+        title: const Text('Registration'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -28,21 +29,24 @@ class RegistrationPage extends StatelessWidget {
           children: [
             TextFormField(
               controller: _emailController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Email',
+                prefixIcon: Icon(Icons.email),
               ),
             ),
+            const SizedBox(height: 16.0),
             TextFormField(
               controller: _passwordController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
+                prefixIcon: Icon(Icons.lock),
               ),
               obscureText: true,
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: () => _signUp(context),
-              child: Text('Sign Up'),
+              child: const Text('Sign Up'),
             ),
           ],
         ),

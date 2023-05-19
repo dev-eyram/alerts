@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Impulse Buying App',
         theme: ThemeData(
+          scaffoldBackgroundColor: Colors.grey,
           primarySwatch: Colors.blue,
         ),
         initialRoute: '/',

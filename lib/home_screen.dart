@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'purchase_tracker.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'purchase_tracker.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
             handlePurchase(context);
           },
-          child: Text('Make Purchase'),
+          child: const Text('Make Purchase'),
         ),
       ),
     );

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'purchase_tracker.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'purchase_tracker.dart';
 
 class CheckoutScreen extends StatelessWidget {
-  const CheckoutScreen({super.key});
+  const CheckoutScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class CheckoutScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Checkout'),
         automaticallyImplyLeading: true,
-        scrolledUnderElevation: 2,
+        elevation: 2,
       ),
       body: Center(
         child: ElevatedButton(
